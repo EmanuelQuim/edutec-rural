@@ -51,6 +51,7 @@
       flex: 1;
       background-color: #eaf2f8;
       padding: 1rem;
+      border-radius: 8px;
     }
     .entry {
       background-color: white;
@@ -76,6 +77,24 @@
       width: 100%;
       border-radius: 6px;
       margin-top: 10px;
+    }
+    .post-card {
+      margin-bottom: 15px;
+      padding: 10px;
+      border-left: 4px solid #2e86c1;
+      background: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    .post-card:hover {
+      background-color: #d6eaf8;
+      transform: scale(1.02);
+    }
+    .post-card a {
+      text-decoration: none;
+      color: #1b4f72;
+      display: block;
     }
   </style>
 </head>
@@ -103,8 +122,8 @@
       </div>
     </div>
     <aside class="sidebar">
-      <h3>Últimas Entradas</h3>
-      <ul id="recentPosts"></ul>
+      <h3>📚 Últimas Entradas</h3>
+      <ul id="recentPosts" style="list-style: none; padding: 0; margin: 0;"></ul>
     </aside>
   </div>
   <footer>
@@ -112,55 +131,26 @@
   </footer>
   <script>
     const posts = [
-      {
-        title: "Tecnología sin Internet: Uso de Radios Educativos",
-        date: "19 junio 2025",
-        link: "uso_de_radios_educativos.html"
-      },
-      {
-        title: "Energía Solar para Cargar Tablets Educativas",
-        date: "18 junio 2025",
-        link: "entrada_2.html"
-      },
-      {
-        title: "Actividades Lúdicas con Proyector Solar",
-        date: "17 junio 2025",
-        link: "entrada_3.html"
-      },
-      {
-        title: "Kits Móviles de Aprendizaje Digital",
-        date: "16 junio 2025",
-        link: "entrada_4.html"
-      },
-      {
-        title: "Construcción de Historietas Digitales sin Conexión",
-        date: "15 junio 2025",
-        link: "entrada_5.html"
-      },
-      {
-        title: "Recursos Educativos con Reciclaje",
-        date: "14 junio 2025",
-        link: "recursos_reciclados_blog.html"
-      },
-      {
-        title: "Recursos Digitales para Maestros",
-        date: "13 junio 2025",
-        link: "recursos_digitales_maestros.html"
-      },
-      {
-        title: "Como grabar clases sin internet",
-        date: "12 junio 2025",
-        link: "grabar_clases_sin_internet.html"
-      }
-      
+      { title: "Tecnología sin Internet: Uso de Radios Educativos", date: "19 junio 2025", link: "uso_de_radios_educativos.html" },
+      { title: "Energía Solar para Cargar Tablets Educativas", date: "18 junio 2025", link: "entrada_2.html" },
+      { title: "Actividades Lúdicas con Proyector Solar", date: "17 junio 2025", link: "entrada_3.html" },
+      { title: "Kits Móviles de Aprendizaje Digital", date: "16 junio 2025", link: "entrada_4.html" },
+      { title: "Construcción de Historietas Digitales sin Conexión", date: "15 junio 2025", link: "entrada_5.html" },
+      { title: "Recursos Educativos con Reciclaje", date: "14 junio 2025", link: "recursos_reciclados_blog.html" },
+      { title: "Recursos Digitales para Maestros", date: "13 junio 2025", link: "recursos_digitales_maestros.html" },
+      { title: "Cómo grabar clases sin internet", date: "12 junio 2025", link: "grabar_clases_sin_internet.html" }
     ];
 
     const recentPosts = document.getElementById('recentPosts');
-
-    posts.forEach((post) => {
-      const listItem = document.createElement('li');
-      listItem.innerHTML = `<a href="${post.link}" style="text-decoration:none;color:#1b4f72;">${post.title} <br><small>${post.date}</small></a>`;
-      recentPosts.appendChild(listItem);
+    posts.forEach(post => {
+      const item = document.createElement('li');
+      item.className = "post-card";
+      item.innerHTML = `
+        <a href="${post.link}">
+          📘 <strong>${post.title}</strong><br>
+          <small>${post.date}</small>
+        </a>`;
+      recentPosts.appendChild(item);
     });
   </script>
 </body>
