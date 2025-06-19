@@ -5,13 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Recursos Digitales Gratuitos para Maestros</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; }
-    header, footer {
-      background: #2e86c1; color: white; padding: 1rem; text-align: center;
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
     }
-    nav { background: #1b4f72; display: flex; justify-content: center; }
-    nav a { color: white; padding: 1rem; text-decoration: none; }
-    nav a:hover { background: #21618c; }
+
+    header, footer {
+      background: #2e86c1;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #1b4f72;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background: #21618c;
+    }
+
     main {
       max-width: 800px;
       margin: 2rem auto;
@@ -20,7 +43,13 @@
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    img { width: 100%; border-radius: 8px; margin: 1rem 0; }
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+
     .video-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -30,6 +59,7 @@
       border-radius: 8px;
       box-shadow: 0 0 8px rgba(0,0,0,0.2);
     }
+
     .video-container iframe {
       position: absolute;
       top: 0;
@@ -38,9 +68,7 @@
       height: 100%;
       border: 0;
     }
-    footer {
-      margin-top: 3rem;
-    }
+
     a.boton {
       display: inline-block;
       margin-top: 2rem;
@@ -50,13 +78,45 @@
       text-decoration: none;
       border-radius: 6px;
     }
+
+    footer {
+      margin-top: 3rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      main {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      nav a {
+        padding: 0.8rem;
+        width: 100%;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.2rem;
+      }
+      main h2 {
+        font-size: 1.2rem;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://cdn-icons-png.flaticon.com/512/2933/2933816.png" alt="Logo EduTec" style="height:40px;width:auto;vertical-align:middle;margin-right:10px;filter:brightness(0) invert(1);">
+    <img src="https://cdn-icons-png.flaticon.com/512/2933/2933816.png"
+         alt="Logo EduTec"
+         style="height:40px;width:auto;vertical-align:middle;margin-right:10px;filter:brightness(0) invert(1);">
     <h1 style="display:inline-block;vertical-align:middle;margin:0;">EduTec Rural</h1>
   </header>
+
   <nav>
     <a href="index.html">Inicio</a>
     <a href="sobre.html">Sobre el Blog</a>
@@ -73,35 +133,45 @@
     <p>Plataforma interactiva para crear presentaciones, infografías, juegos y escape rooms. Ideal para captar la atención de los estudiantes.</p>
     <a href="https://www.genial.ly/" target="_blank">Visitar Genially</a>
     <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/phDVpUUNewA?si=OMBBFQ99Vsd9UzSg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/phDVpUUNewA?si=OMBBFQ99Vsd9UzSg"
+              title="YouTube video player"
+              allowfullscreen></iframe>
     </div>
 
     <h3>2. Educaplay</h3>
     <p>Permite crear actividades como crucigramas, sopas de letras, test y mapas interactivos.</p>
     <a href="https://es.educaplay.com/" target="_blank">Explorar Educaplay</a>
     <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/fM6LhVueIvM?si=3nCsMSbdz0-V2WRS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/fM6LhVueIvM?si=3nCsMSbdz0-V2WRS"
+              title="YouTube video player"
+              allowfullscreen></iframe>
     </div>
 
     <h3>3. Wordwall</h3>
     <p>Generador de actividades como ruletas, emparejamientos y cuestionarios, con opción de imprimir o usar en línea.</p>
     <a href="https://wordwall.net/es" target="_blank">Acceder a Wordwall</a>
     <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/wL4OOVyzJHE?si=ojxMjA1gWAs8yT5r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/wL4OOVyzJHE?si=ojxMjA1gWAs8yT5r"
+              title="YouTube video player"
+              allowfullscreen></iframe>
     </div>
 
     <h3>4. Canva para Educación</h3>
     <p>Diseña materiales educativos visuales fácilmente. Incluye plantillas listas para usar por docentes.</p>
     <a href="https://www.canva.com/edu-signup/" target="_blank">Registrarse en Canva</a>
     <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/9_CyiVVKwmw?si=giMt1yBxCZOITTXf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/9_CyiVVKwmw?si=giMt1yBxCZOITTXf"
+              title="YouTube video player"
+              allowfullscreen></iframe>
     </div>
 
     <h3>5. Kahoot!</h3>
     <p>Crea quizzes divertidos para evaluación formativa y participación en tiempo real.</p>
     <a href="https://kahoot.com/schools-u/" target="_blank">Probar Kahoot!</a>
     <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/0p97nyYgOf4?si=KMPGZQ_hoEAlUs_n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/0p97nyYgOf4?si=KMPGZQ_hoEAlUs_n"
+              title="YouTube video player"
+              allowfullscreen></iframe>
     </div>
 
     <p>Estos recursos son especialmente útiles en zonas con acceso a computadoras o dispositivos móviles, y también pueden usarse sin conexión si se descargan previamente.</p>
