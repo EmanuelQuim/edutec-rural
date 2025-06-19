@@ -10,6 +10,39 @@
       margin: 0;
       background-color: #f9f9f9;
     }
+
+    /* Loader */
+    #loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #2e86c1;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      transition: opacity 0.8s ease;
+    }
+
+    .loader-content {
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .loader-content img {
+      height: 60px;
+      margin-bottom: 1rem;
+      filter: brightness(0) invert(1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
     header {
       background-color: #2e86c1;
       color: white;
@@ -99,6 +132,17 @@
   </style>
 </head>
 <body>
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-content">
+      <img src="https://cdn-icons-png.flaticon.com/512/2933/2933816.png" alt="Logo EduTec">
+      <h1>EduTec Rural</h1>
+      <p>Bienvenidos...</p>
+    </div>
+  </div>
+
+  <!-- Página principal -->
   <header>
     <img src="https://cdn-icons-png.flaticon.com/512/2933/2933816.png" alt="Logo EduTec" style="height: 60px; vertical-align: middle; margin-right: 10px; filter: brightness(0) invert(1);">
     <h1 style="display: inline-block; vertical-align: middle; margin: 0;">EduTec Rural</h1>
@@ -129,7 +173,19 @@
   <footer>
     &copy; 2025 EduTec Rural. Todos los derechos reservados. Profesor: Edson Emanuel Tun Quim
   </footer>
+
   <script>
+    // Animación de bienvenida
+    document.addEventListener("DOMContentLoaded", () => {
+      const loader = document.getElementById("loader");
+      setTimeout(() => {
+        loader.style.opacity = "0";
+        loader.style.pointerEvents = "none";
+        setTimeout(() => loader.style.display = "none", 1000);
+      }, 1000);
+    });
+
+    // Publicaciones dinámicas
     const posts = [
       { title: "Tecnología sin Internet: Uso de Radios Educativos", date: "19 junio 2025", link: "uso_de_radios_educativos.html" },
       { title: "Energía Solar para Cargar Tablets Educativas", date: "18 junio 2025", link: "entrada_2.html" },
@@ -155,4 +211,3 @@
   </script>
 </body>
 </html>
-
