@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduTec Rural - Blog Educativo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #2e86c1;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    header span {
+      font-size: 1rem;
+      display: block;
+      margin-top: 0.3rem;
+      font-weight: 300;
+    }
+    nav {
+      background-color: #1b4f72;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #21618c;
+    }
+    .container {
+      display: flex;
+      padding: 1rem;
+    }
+    .main {
+      flex: 3;
+      padding-right: 1rem;
+    }
+    .sidebar {
+      flex: 1;
+      background-color: #eaf2f8;
+      padding: 1rem;
+    }
+    .entry {
+      background-color: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .entry h2 {
+      margin-top: 0;
+    }
+    .entry small {
+      color: gray;
+    }
+    footer {
+      background-color: #2e86c1;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    img.blog-img {
+      width: 100%;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/2933/2933816.png" alt="Logo EduTec" style="height: 60px; vertical-align: middle; margin-right: 10px; filter: brightness(0) invert(1);">
+    <h1 style="display: inline-block; vertical-align: middle; margin: 0;">EduTec Rural</h1>
+    <span>Tecnología y educación en zonas remotas</span>
+  </header>
+  <nav>
+    <a href="bienvenida.html">Inicio</a>
+    <a href="sobre.html">Sobre el Blog</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+  <div class="container">
+    <div class="main">
+      <div class="entry">
+        <h2>Bienvenido al Blog Educativo</h2>
+        <p>Este blog está diseñado especialmente para docentes que enfrentan desafíos únicos al educar en zonas remotas.
+        Aquí encontrarás estrategias, ideas creativas y recursos para integrar la tecnología en contextos donde el acceso
+        a internet o energía eléctrica es limitado.</p>
+        <p>A través de entradas semanales, compartiremos actividades lúdicas, proyectos innovadores, e historias inspiradoras
+        de maestros que están transformando la educación desde cualquier rincón del mundo.</p>
+        <img src="https://es.fabretto.org/wp-content/uploads/sites/2/2023/08/tech-integrarion-1024x683.jpg" alt="Bienvenida tecnológica" class="blog-img">
+      </div>
+    </div>
+    <aside class="sidebar">
+      <h3>Últimas Entradas</h3>
+      <ul id="recentPosts"></ul>
+    </aside>
+  </div>
+  <footer>
+    &copy; 2025 EduTec Rural. Todos los derechos reservados. Profesor: Edson Emanuel Tun Quim
+  </footer>
+  <script>
+    const posts = [
+      {
+        title: "Tecnología sin Internet: Uso de Radios Educativos",
+        date: "19 junio 2025",
+        link: "uso_de_radios_educativos.html"
+      },
+      {
+        title: "Energía Solar para Cargar Tablets Educativas",
+        date: "18 junio 2025",
+        link: "entrada_2.html"
+      },
+      {
+        title: "Actividades Lúdicas con Proyector Solar",
+        date: "17 junio 2025",
+        link: "entrada_3.html"
+      },
+      {
+        title: "Kits Móviles de Aprendizaje Digital",
+        date: "16 junio 2025",
+        link: "entrada_4.html"
+      },
+      {
+        title: "Construcción de Historietas Digitales sin Conexión",
+        date: "15 junio 2025",
+        link: "entrada_5.html"
+      }
+    ];
+
+    const recentPosts = document.getElementById('recentPosts');
+
+    posts.forEach((post) => {
+      const listItem = document.createElement('li');
+      listItem.innerHTML = `<a href="${post.link}" style="text-decoration:none;color:#1b4f72;">${post.title} <br><small>${post.date}</small></a>`;
+      recentPosts.appendChild(listItem);
+    });
+  </script>
+</body>
+</html>
+
