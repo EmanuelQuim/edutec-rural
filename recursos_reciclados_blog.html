@@ -5,13 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Recursos Didácticos Reciclados</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; }
-    header, footer {
-      background: #2e86c1; color: white; padding: 1rem; text-align: center;
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
     }
-    nav { background: #1b4f72; display: flex; justify-content: center; }
-    nav a { color: white; padding: 1rem; text-decoration: none; }
-    nav a:hover { background: #21618c; }
+
+    header, footer {
+      background: #2e86c1;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #1b4f72;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background: #21618c;
+    }
+
     main {
       max-width: 800px;
       margin: 2rem auto;
@@ -20,19 +43,13 @@
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    img { width: 100%; border-radius: 8px; margin: 1rem 0; }
-    footer {
-      margin-top: 3rem;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin: 1rem 0;
     }
-    a.boton {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.8rem 1.5rem;
-      background: #2e86c1;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-    }
+
     .video-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -42,13 +59,60 @@
       border-radius: 8px;
       box-shadow: 0 0 8px rgba(0,0,0,0.2);
     }
+
     .video-container iframe {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      border-radius: 8px;
+      border: none;
+    }
+
+    a.boton {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background: #2e86c1;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    footer {
+      margin-top: 3rem;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      main {
+        padding: 1rem;
+        margin: 1rem;
+      }
+
+      nav a {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      main h2 {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.2rem;
+      }
+
+      main h3 {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -57,6 +121,7 @@
     <img src="https://cdn-icons-png.flaticon.com/512/2933/2933816.png" alt="Logo EduTec" style="height:40px;width:auto;vertical-align:middle;margin-right:10px;filter:brightness(0) invert(1);">
     <h1 style="display:inline-block;vertical-align:middle;margin:0;">EduTec Rural</h1>
   </header>
+
   <nav>
     <a href="index.html">Inicio</a>
     <a href="sobre.html">Sobre el Blog</a>
@@ -69,37 +134,32 @@
 
     <h3>1. Teatrino Portátil con Caja de Cartón</h3>
     <p>Transforma una caja en un pequeño teatro para representar cuentos. Ideal para fomentar la expresión oral.</p>
-   
     <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/jX2-6U21Nx0?si=YPs6haBuA79tW5a_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/jX2-6U21Nx0?si=YPs6haBuA79tW5a_" allowfullscreen></iframe>
     </div>
 
     <h3>2. Ábaco Artesanal con Tapas</h3>
     <p>Usa tapas plásticas y cuerdas para crear un ábaco casero que ayude a practicar operaciones matemáticas.</p>
-   
     <div class="video-container">
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/opEs5CyCxPI?si=Wh0vQtO4zz2CBEPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/opEs5CyCxPI?si=Wh0vQtO4zz2CBEPU" allowfullscreen></iframe>
     </div>
 
     <h3>3. Dominó de Letras</h3>
     <p>Fabrica piezas de dominó con cartón para reforzar el abecedario o vocabulario. Divertido y didáctico.</p>
-   
     <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/CwiX0Dh1eaY?si=DGJOKC9sFkn57YQo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/CwiX0Dh1eaY?si=DGJOKC9sFkn57YQo" allowfullscreen></iframe>
     </div>
 
     <h3>4. Rompecabezas Educativo</h3>
     <p>Recorta cajas y crea rompecabezas de animales, números o mapas. Excelente para estimular la lógica.</p>
-    
     <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/WWMSGI27qHc?si=8yq-dHekc3Dz4WTg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/WWMSGI27qHc?si=8yq-dHekc3Dz4WTg" allowfullscreen></iframe>
     </div>
 
     <h3>5. Tablero de Emociones</h3>
     <p>Representa emociones con tapas plásticas en un tablero de cartón. Apoya el desarrollo emocional de los estudiantes.</p>
-   
     <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/og55-36k9GU?si=rEYTJrlEY1wDu_Hy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/og55-36k9GU?si=rEYTJrlEY1wDu_Hy" allowfullscreen></iframe>
     </div>
 
     <p>¿Quieres ver más ideas? Visita <a href="https://www.educapeques.com" target="_blank">Educapeques.com</a> para explorar otros recursos.</p>
@@ -112,3 +172,4 @@
   </footer>
 </body>
 </html>
+
