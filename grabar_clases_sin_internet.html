@@ -5,13 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Grabar clases sin internet</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; }
-    header, footer {
-      background: #2e86c1; color: white; padding: 1rem; text-align: center;
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
     }
-    nav { background: #1b4f72; display: flex; justify-content: center; }
-    nav a { color: white; padding: 1rem; text-decoration: none; }
-    nav a:hover { background: #21618c; }
+    header, footer {
+      background: #2e86c1;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #1b4f72;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background: #21618c;
+    }
     main {
       max-width: 800px;
       margin: 2rem auto;
@@ -20,8 +38,11 @@
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    img { width: 100%; border-radius: 8px; margin: 1rem 0; }
-    footer { margin-top: 3rem; }
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
     a.boton {
       display: inline-block;
       margin-top: 2rem;
@@ -31,6 +52,49 @@
       text-decoration: none;
       border-radius: 6px;
     }
+
+    /* Estilo para hacer responsive el iframe */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 1rem 0;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      main {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      nav a {
+        padding: 0.8rem;
+        width: 100%;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.2rem;
+      }
+      main h2 {
+        font-size: 1.2rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -38,6 +102,7 @@
     <img src="https://cdn-icons-png.flaticon.com/512/2933/2933816.png" alt="Logo EduTec" style="height:40px;width:auto;vertical-align:middle;margin-right:10px;filter:brightness(0) invert(1);">
     <h1 style="display:inline-block;vertical-align:middle;margin:0;">EduTec Rural</h1>
   </header>
+
   <nav>
     <a href="index.html">Inicio</a>
     <a href="sobre.html">Sobre el Blog</a>
@@ -55,7 +120,14 @@
 
     <h3>2. Edición básica sin internet</h3>
     <p>Descarga una app ligera como <strong>InShot</strong> o <strong>KineMaster</strong> que permiten editar sin conexión. Puedes cortar errores, agregar títulos y música.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/_SuJ4kdv-pQ?si=APdjfUu-SBQ9GqB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/_SuJ4kdv-pQ?si=APdjfUu-SBQ9GqB8" 
+              title="YouTube video player" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+      </iframe>
+    </div>
 
     <h3>3. Cómo compartir sin internet</h3>
     <ul>
