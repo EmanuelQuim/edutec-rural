@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cazadores de Emociones - App Educativa</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; }
+    header, footer {
+      background: #2e86c1; color: white; padding: 1rem; text-align: center;
+    }
+    header h1 {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    header img {
+      height: 40px;
+      vertical-align: middle;
+      margin-right: 10px;
+      filter: brightness(0) invert(1);
+    }
+    nav {
+      background: #1b4f72;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+    }
+    nav a:hover { background: #21618c; }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    .emotion-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+    .emotion-card {
+      text-align: center;
+      background: #f1f1f1;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .emotion-card img {
+      width: 100%;
+      max-width: 140px;
+      margin: auto;
+    }
+    .boton {
+      display: inline-block;
+      margin: 2rem 0;
+      padding: 0.8rem 1.5rem;
+      background: #2e86c1;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    footer {
+      margin-top: 3rem;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+      }
+      header h1 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/2933/2933816.png" alt="Logo EduTec" style="height: 60px; width: auto; vertical-align: middle; margin-right: 10px; filter: brightness(0) invert(1);">
+    <h1>EduTec Rural</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="sobre.html">Sobre el Blog</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <main>
+    <h2>Cazadores de Emociones: ¡Atrapa y aprende jugando!</h2>
+    <p><strong>Publicado el:</strong> 21 junio 2025</p>
+
+    <p><strong>Cazadores de Emociones</strong> es una app educativa que combina el juego con el desarrollo emocional. Dirigida especialmente a niños y niñas en edad escolar, esta aplicación te permite explorar un mundo de emociones personificadas en adorables monstruos.</p>
+
+    <h3>¿Qué incluye?</h3>
+    <ul>
+      <li>6 emociones básicas con personajes únicos.</li>
+      <li>Cartas coleccionables interactivas.</li>
+      <li>Reto de pronunciación y escritura por emoción.</li>
+      <li>Modo sin conexión y sincronización automática.</li>
+    </ul>
+
+    <h3>Conoce a los personajes:</h3>
+    <div class="emotion-grid">
+      <div class="emotion-card">
+        <img src="/mnt/data/calmorin.png" alt="Calmorin">
+        <p><strong>Calmorin</strong><br>Representa la calma y el equilibrio interior.</p>
+      </div>
+      <div class="emotion-card">
+        <img src="/mnt/data/furiuspin.png" alt="Furiuspin">
+        <p><strong>Furiuspin</strong><br>El torbellino de la ira, aprenderás a calmarlo.</p>
+      </div>
+      <div class="emotion-card">
+        <img src="/mnt/data/luminheart.png" alt="Luminheart">
+        <p><strong>Luminheart</strong><br>La emoción del amor que ilumina todo.</p>
+      </div>
+      <div class="emotion-card">
+        <img src="/mnt/data/solonix.png" alt="Solonix">
+        <p><strong>Solonix</strong><br>La chispa de la alegría, energía brillante.</p>
+      </div>
+      <div class="emotion-card">
+        <img src="/mnt/data/temerwind.png" alt="Temerwind">
+        <p><strong>Temerwind</strong><br>El viento del miedo, aprender a enfrentarlo.</p>
+      </div>
+      <div class="emotion-card">
+        <img src="/mnt/data/tristonio.png" alt="Tristonio">
+        <p><strong>Tristonio</strong><br>La tristeza hecha nube que necesita ser escuchada.</p>
+      </div>
+    </div>
+
+    <h3>¿Cómo usarla?</h3>
+    <ol>
+      <li>Descarga la app desde el enlace abajo.</li>
+      <li>Escanea los códigos QR de las emociones escondidas.</li>
+      <li>Resuelve los retos para desbloquear la carta.</li>
+      <li>Observa tu progreso desde el mapa emocional.</li>
+    </ol>
+
+    <a href="https://bit.ly/cazadores-app" class="boton" target="_blank">⬇ Descargar la app aquí</a>
+
+    <h3>QRs y póster oficial</h3>
+    <p>Descarga este documento que incluye los códigos QR para escanear cada emoción y el póster oficial del juego educativo.</p>
+    <a href="https://docs.google.com/document/d/1nSPRaEsPVzrHFcY3qPygpKZg0cuwUyFQ/edit?usp=sharing&ouid=107887931724924626033&rtpof=true&sd=true" 
+       target="_blank" 
+       class="boton">📄 Ver documento de QR y póster</a>
+
+    <a href="index.html" class="boton">&larr; Regresar al inicio</a>
+  </main>
+
+  <footer>
+    &copy; 2025 EduTec Rural. Todos los derechos reservados. Profesor: Edson Emanuel Tun Quim
+  </footer>
+</body>
+</html>
